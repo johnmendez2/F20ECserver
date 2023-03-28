@@ -23,7 +23,7 @@ app.post('/checkout',async(req, res)=>{
         })
         const key = uuidv4();
         const charge = await stripe.charges.create({
-            amount: cart.totalPricewShip*100 - 20,
+            amount: cart.totalPricewShip*100 - 20*100,
             currency: 'usd',
             customer: customer.id,
             receipt_email: token.email,
