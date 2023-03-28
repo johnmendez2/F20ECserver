@@ -1,12 +1,18 @@
 {
+  "homepage": "http://johnmendez2.github.io/F20ECserver",
   "name": "server",
   "version": "1.0.0",
   "description": "server for F20EC coursework",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "predeploy": "npm run build",
+     "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
   },
+  
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -14,5 +20,8 @@
     "express": "^4.18.2",
     "stripe": "^11.16.0",
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
